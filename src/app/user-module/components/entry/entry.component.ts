@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { User } from 'src/app/models/user';
 import { Store, select } from '@ngrx/store';
-import { UserStoreState, RootStoreState, UserStoreSelectors, UserStoreActions } from '../../../root-store';
+// Can import from User-Store or from Root-Store since both export the State/Selectors/Actions
+import { UserStoreState, UserStoreSelectors, UserStoreActions } from '../../user-store';
+import { RootStoreState } from '../../../root-store';
 
 @Component({
   selector: 'app-entry',
