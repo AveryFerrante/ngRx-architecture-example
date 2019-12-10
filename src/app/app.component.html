@@ -1,6 +1,1 @@
-User: {{ (user$ | async) | json }}
-<input type="text" #userSearch />
-<button (click)="searchUsers(userSearch.value)">Search Users</button>
-<div *ngIf="($isLoading | async)">
-    LOADING!
-</div>
+<router-outlet></router-outlet>

@@ -4,7 +4,7 @@ import { initialState, State } from './state';
 
 const r = createReducer(
     initialState,
-    on(Actions.userRequest, state => { console.log('reducer user request action'); return { ...state, isLoading: true }; }),
+    on(Actions.userRequest, state => ({ ...state, isLoading: true })),
     on(Actions.userRequestSuccess, (state, { user }) => ({ ...state, user,  isLoading: false })),
     on(Actions.userRequestFailure, (state, { error }) => ({ ...state, error: error.message, isLoading: false }))
 );

@@ -1,0 +1,8 @@
+User: {{ (user$ | async) | json }}
+<input type="text" #userSearch />
+<button (click)="searchUsers(userSearch.value)">Search Users</button>
+Age: {{ (userAge$ | async) }} <br />
+Current State: {{ (userState$ | async) | json }}
+<div *ngIf="(isLoading$ | async)">
+    LOADING!
+</div>

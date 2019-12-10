@@ -8,6 +8,6 @@ export interface State {
 
 export const initialState: State = {
     user: null,
-    isLoading: true,
+    isLoading: false,
     error: null
 };
